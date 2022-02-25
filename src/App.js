@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import TestEffect from './components/effect/index'
+import TestDataFetch from './components/effect/TestDataFetch'
+let count = 0
+export default function App() {
+  const [name, setName] = useState('world')
+  const handleClick = () => { 
+    setName('world' + count++)
+  }
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+        <button onClick={handleClick}>点我</button>
+        <TestEffect name={name}/>
+        <TestDataFetch />
+      </div>
+  )
 }
-
-export default App;
