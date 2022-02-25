@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
-import TestEffect from './components/effect/index'
+// import TestEffect from './components/effect/index'
 import TestDataFetch from './components/effect/TestDataFetch'
 import Button from './components/stateHook/Button'
 import TestFunctionDep from './components/stateHook/TestFunctionDep'
+import StateSeq from './components/stateHook/StateSeq'
+import TestEffect from './components/effect/TestEffect'
 let count = 0
 export default function App() {
   const [name, setName] = useState('world')
@@ -16,7 +18,9 @@ export default function App() {
         {/* <TestEffect name={name}/>
         <TestDataFetch /> */}
         {/* <Button name="Bob"/> */}
-        <TestFunctionDep />
+        {/* <TestFunctionDep /> */}
+        {/* <StateSeq />  */}
+        <TestEffect />
       </div>
   )
 }
