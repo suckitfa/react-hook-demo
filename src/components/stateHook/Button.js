@@ -1,11 +1,6 @@
 import React,{useState} from 'react'
-
 export default function Button() {
-    const [buttonText,setButtonText] = useState('Click Me');
-    const handleClick = () => {
-        setButtonText('Clicked');
-    }
-    return (
-        <button onClick={handleClick}>{buttonText}</button>
-    )
+	const [buttonText,setButtonText] = useState('clicked me')
+	const handleButtonClick = () => setButtonText('button clicked!')
+	return <button onClick={handleButtonClick}>{buttonText}</button>
 }
